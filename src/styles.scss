@@ -1,0 +1,82 @@
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+#root, .App {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100%;
+}
+
+.Nodes {
+  .Node {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    border: 0.25rem solid #8bc34a;
+  
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    &.queue {
+      background: #8bc34a;
+      color: white;
+      border: none;
+    }
+  }
+}
+
+.Links {
+  .Link {
+    stroke: #8bc34a;
+    stroke-width: 0.25rem;
+    fill: transparent;
+
+    &.error {
+      stroke: #ca0000;
+    }
+
+    &.dashed {
+      stroke-dasharray: 10,5;
+    }
+  }
+}
+
+.Dots {
+  .Dot {
+    fill: black;
+  }
+}
+
+.Container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  & > div {
+    z-index: 1;
+  }
+
+   & > * {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
